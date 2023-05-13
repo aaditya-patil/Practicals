@@ -1,0 +1,215 @@
+
+Git download, sign in, git bash installation, create file
+
+aadit@LAPTOP-JGFA2MFI MINGW64 ~/OneDrive/Desktop
+$ git config --global user.name "vaishutajne"
+
+aadit@LAPTOP-JGFA2MFI MINGW64 ~/OneDrive/Desktop
+$ git init
+Initialized empty Git repository in D:/Desktop/.git/
+
+aadit@LAPTOP-JGFA2MFI MINGW64 ~/OneDrive/Desktop (master)
+$ git clone https://github.com/Aadityapatil75/Test.git
+Cloning into 'Test'...
+warning: You appear to have cloned an empty repository.
+
+aadit@LAPTOP-JGFA2MFI MINGW64 ~/OneDrive/Desktop/Test (main)
+$ git add .
+fatal: Unable to create 'C:/Users/aadit/.git/index.lock': File exists.
+
+Another git process seems to be running in this repository, e.g.
+an editor opened by 'git commit'. Please make sure all processes
+are terminated then try again. If it still fails, a git process
+may have crashed in this repository earlier:
+remove the file manually to continue.
+
+aadit@LAPTOP-JGFA2MFI MINGW64 ~/OneDrive/Desktop/Test (main)
+$ git add .
+warning: in the working copy of 'OneDrive/Desktop/Test/Readme.md', LF will be replaced by CRLF the next time Git touches it
+
+aadit@LAPTOP-JGFA2MFI MINGW64 ~/OneDrive/Desktop/Test (main)
+$ git commit -m "first commit"
+[main (root-commit) b52874d] first commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 OneDrive/Desktop/Test/Readme.md
+
+aadit@LAPTOP-JGFA2MFI MINGW64 ~/OneDrive/Desktop/Test (main)
+$ git remote add origin https://github.com/Aadityapatil75/Test.git
+
+aadit@LAPTOP-JGFA2MFI MINGW64 ~/OneDrive/Desktop/Test (main)
+$ ls
+Readme.md
+
+aadit@LAPTOP-JGFA2MFI MINGW64 ~/OneDrive/Desktop/Test (main)
+$ git push origin main
+fatal: helper error (-1): User cancelled dialog.
+remote: No anonymous write access.
+fatal: Authentication failed for 'https://github.com/Aadityapatil75/Test.git/'
+
+aadit@LAPTOP-JGFA2MFI MINGW64 ~/OneDrive/Desktop/Test (main)
+$ git push origin main
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 347 bytes | 173.00 KiB/s, done.
+Total 6 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Aadityapatil75/Test.git
+ * [new branch]      main -> main
+
+aadit@LAPTOP-JGFA2MFI MINGW64 ~/OneDrive/Desktop/Test (main)
+$ git branch -M feature
+
+aadit@LAPTOP-JGFA2MFI MINGW64 ~/OneDrive/Desktop/Test (feature)
+$ git branch -M ass2
+
+aadit@LAPTOP-JGFA2MFI MINGW64 ~/OneDrive/Desktop/Test (ass2)
+$ git checkout -b ass2
+fatal: a branch named 'ass2' already exists
+
+aadit@LAPTOP-JGFA2MFI MINGW64 ~/OneDrive/Desktop/Test (ass2)
+$ ls
+Readme.md  ass2/
+
+aadit@LAPTOP-JGFA2MFI MINGW64 ~/OneDrive/Desktop/Test (ass2)
+$ git add ass2
+
+aadit@LAPTOP-JGFA2MFI MINGW64 ~/OneDrive/Desktop/Test (ass2)
+$ git commit -m "ass2 added"
+[ass2 88fda4e] ass2 added
+ 3 files changed, 87 insertions(+)
+ create mode 100644 OneDrive/Desktop/Test/ass2/.vscode/settings.json
+ create mode 100644 OneDrive/Desktop/Test/ass2/index.html
+ create mode 100644 OneDrive/Desktop/Test/ass2/second.html
+
+aadit@LAPTOP-JGFA2MFI MINGW64 ~/OneDrive/Desktop/Test (ass2)
+$ git push origin ass2
+Enumerating objects: 14, done.
+Counting objects: 100% (14/14), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (10/10), 1.47 KiB | 300.00 KiB/s, done.
+Total 10 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'ass2' on GitHub by visiting:
+remote:      https://github.com/Aadityapatil75/Test/pull/new/ass2
+remote:
+To https://github.com/Aadityapatil75/Test.git
+ * [new branch]      ass2 -> ass2
+
+aadit@LAPTOP-JGFA2MFI MINGW64 ~/OneDrive/Desktop/Test (ass2)
+$ git branch -M webportfolio
+
+aadit@LAPTOP-JGFA2MFI MINGW64 ~/OneDrive/Desktop/Test (webportfolio)
+$ git add webportfolio
+
+aadit@LAPTOP-JGFA2MFI MINGW64 ~/OneDrive/Desktop/Test (webportfolio)
+$ git commit -m "webportfolio added
+> "
+[webportfolio ed382d3] webportfolio added
+ 12 files changed, 990 insertions(+)
+ create mode 100644 OneDrive/Desktop/Test/webportfolio/personal porfolio/css/style.css
+ create mode 100644 OneDrive/Desktop/Test/webportfolio/personal porfolio/images/aws.jpg
+ create mode 100644 OneDrive/Desktop/Test/webportfolio/personal porfolio/images/forage.jpg
+ create mode 100644 OneDrive/Desktop/Test/webportfolio/personal porfolio/images/h2s.jpg
+ create mode 100644 OneDrive/Desktop/Test/webportfolio/personal porfolio/images/img1.jpg
+ create mode 100644 OneDrive/Desktop/Test/webportfolio/personal porfolio/images/img3.jpg
+ create mode 100644 OneDrive/Desktop/Test/webportfolio/personal porfolio/images/internship studio.jpg
+ create mode 100644 OneDrive/Desktop/Test/webportfolio/personal porfolio/images/isro.jpg
+ create mode 100644 OneDrive/Desktop/Test/webportfolio/personal porfolio/images/microsoft.jpg
+ create mode 100644 OneDrive/Desktop/Test/webportfolio/personal porfolio/images/photo.png
+ create mode 100644 OneDrive/Desktop/Test/webportfolio/personal porfolio/index.html
+ create mode 100644 OneDrive/Desktop/Test/webportfolio/personal porfolio/js/script.js
+
+add" to track)
+
+aadit@LAPTOP-JGFA2MFI MINGW64 ~/OneDrive/Desktop/Test (webportfolio)
+$ git push origin webportfolio
+Enumerating objects: 26, done.
+Counting objects: 100% (26/26), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (16/16), done.
+Writing objects: 100% (22/22), 562.02 KiB | 15.61 MiB/s, done.
+Total 22 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'webportfolio' on GitHub by visiting:
+remote:      https://github.com/Aadityapatil75/Test/pull/new/webportfolio
+remote:
+To https://github.com/Aadityapatil75/Test.git
+ * [new branch]      webportfolio -> webportfolio
+
+aadit@LAPTOP-JGFA2MFI MINGW64 ~/OneDrive/Desktop/Test (webportfolio)
+$ git log
+commit ed382d339d3fda8b2c8b61bfc4dfc3c8d073782a (HEAD -> webportfolio, origin/webportfolio)
+Author: Aadityapatil75 <aadityapatil7575@gmail.com>
+Date:   Fri Mar 17 14:18:53 2023 +0530
+
+    webportfolio added
+
+commit 88fda4e85f9a94cd8b7aadb4d193691fe8eb8e36 (origin/ass2)
+Author: Aadityapatil75 <aadityapatil7575@gmail.com>
+Date:   Fri Mar 17 14:03:11 2023 +0530
+
+    ass2 added
+
+commit b52874deaec1a9ae5b27ade57dc84c8bd9b209eb (origin/main)
+Author: Aadityapatil75 <aadityapatil7575@gmail.com>
+Date:   Fri Mar 17 13:39:45 2023 +0530
+
+    first commit
+
+aadit@LAPTOP-JGFA2MFI MINGW64 ~/OneDrive/Desktop/Test (webportfolio)
+$ git merge ass2
+merge: ass2 - not something we can merge
+
+Did you mean this?
+        origin/ass2
+w
+aadit@LAPTOP-JGFA2MFI MINGW64 ~/OneDrive/Desktop/Test (ass2)
+$ git checkout main
+hint: core.useBuiltinFSMonitor=true is deprecated;please set core.fsmonitor=true instead
+hint: Disable this message with "git config advice.useCoreFSMonitorConfig false"
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+aadit@LAPTOP-JGFA2MFI MINGW64 ~/OneDrive/Desktop/Test (main)
+$ git merge ass2
+hint: core.useBuiltinFSMonitor=true is deprecated;please set core.fsmonitor=true instead
+hint: Disable this message with "git config advice.useCoreFSMonitorConfig false"
+Updating 68c43fc..fa3dc2a
+Fast-forward
+ login.html | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 login.html
+
+
+aadit@LAPTOP-JGFA2MFI MINGW64 ~/OneDrive/Desktop/Test (webportfolio)
+$ git log
+commit ed382d339d3fda8b2c8b61bfc4dfc3c8d073782a (HEAD -> webportfolio, origin/webportfolio)
+Author: Aadityapatil75 <aadityapatil7575@gmail.com>
+Date:   Fri Mar 17 14:18:53 2023 +0530
+
+    webportfolio added
+
+commit 88fda4e85f9a94cd8b7aadb4d193691fe8eb8e36 (origin/ass2)
+Author: Aadityapatil75 <aadityapatil7575@gmail.com>
+Date:   Fri Mar 17 14:03:11 2023 +0530
+
+    ass2 added
+
+commit b52874deaec1a9ae5b27ade57dc84c8bd9b209eb (origin/main)
+Author: Aadityapatil75 <aadityapatil7575@gmail.com>
+Date:   Fri Mar 17 13:39:45 2023 +0530
+
+    first commit
+
+aadit@LAPTOP-JGFA2MFI MINGW64 ~/OneDrive/Desktop/Test (webportfolio)
+$ git revert ^C
+
+aadit@LAPTOP-JGFA2MFI MINGW64 ~/OneDrive/Desktop/Test (webportfolio)
+^C
+
+aadit@LAPTOP-JGFA2MFI MINGW64 ~/OneDrive/Desktop/Test (webportfolio)
+$ git revert eed382d339d3fda8b2c8b61bfc4dfc3c8d073782a
+fatal: bad revision 'ed382d339d3fda8b2c8b61bfc4dfc3c8d073782a'
+
+aadit@LAPTOP-JGFA2MFI MINGW64 ~/OneDrive/Desktop/Test (webportfolio)
+$ 
