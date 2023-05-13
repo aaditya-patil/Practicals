@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best online food services | MyOnlineMeal.com</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" media="screen and (max-width:1300px)" href="phone.css">
+<style>
+    
+  @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* CSS Variables */
+:root {
+    --navbar-height: 59px;
+}
+
+/* Navigation bar */
+#navbar {
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: 0;
+}
+
+#navbar::before {
+    content: "";
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.6;
+}
+
+/* navbar logo and img */
+#logo img {
+    width: 100px;
+    margin: 1px 6px;
+}
+
+/* navbar: list styling */
+
+#navbar ul {
+    display: flex;
+    font-family: 'Figtree', sans-serif;
+}
+
+#navbar ul li {
+    list-style: none;
+    font-size: 1.3rem;
+}
+
+#navbar ul li a {
+    color: white;
+    display: block;
+    padding: 2px 22px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+#navbar ul li a:hover {
+    color: rgb(2, 2, 2);
+    background-color: white;
+}
+
+/* Home section */
+#home {
+    display: flex;
+    flex-direction: column;
+    padding: 3px 200px;
+    justify-content: center;
+    align-items: center;
+    height: 364px;
+}
+
+#home::before {
+    content: "";
+    background: url('../img/bgm.jpg')no-repeat center center/cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.89;
+}
+
+#home h1 {
+    color: #1a0606;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Caveat', cursive;
+
+}
+
+/* Services Section */
+#services {
+    /* margin: 3px 21px; */
+    display: flex;
+    font-family: 'Figtree', sans-serif;
+    align-items: center;
+    justify-content: center;
+}
+
+.services-container {
+    background-color: rgb(234 239 237);
+    height: 470px;
+}
+
+#services .box {
+    width: 398px;
+    border: 0px solid rgb(255, 255, 255);
+    padding: 4px 2px;
+    background-color: rgb(244, 242, 242);
+    margin: 8px 39px;
+    border-radius: 23px;
+    box-shadow: 2px 2px 16px rgb(0 0 0);
+}
+#services .box:hover {
+    width: 410px;
+    border: 1px solid rgb(206, 131, 131);
+    padding: 4px 2px;
+    background-color: rgb(255 233 233);
+    margin: 8px 39px;
+    border-radius: 23px;
+}
+
+#services .box img {
+    height: 200px;
+    margin: auto;
+    display: block;
+    border-radius: 60px;
+    padding: 16px;
+}
+
+/* Client Section */
+
+#client-section {
+
+    position: relative;
+}
+
+#client-section::before {
+   background-color: #ffeaee;
+   content: "";
+   position: absolute;
+   /* background: url(../img/bg2.jpg); */
+   height: 100%;
+   width: 100%;
+   z-index: -1;
+}
+
+#clients {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.client-item {
+    padding: 34px;
+    margin: 62px 19px;
+    box-shadow: 2px 2px 16px rgb(0 0 0);
+    border-radius: 10px;
+}
+
+.client-item:hover{
+    padding: 34px;
+    margin: 65px 22px;
+    background-color: rgb(234 239 237);
+    box-shadow: 2px 2px 7px rgb(0 0 0);
+    border-radius: 10px;
+}
+
+/* contact-section */
+#contact::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background: url(../img/cont.png)no-repeat center center;
+    z-index: -1;
+    opacity: 1;
+}
+
+#contact-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 33px;
+}
+
+#contact-box input,
+#contact-box textarea {
+    width: 100%;
+    padding: .5rem;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    background-color: #f8f8f8;
+}
+
+#contact-box form {
+    width: 43%;
+}
+
+#contact-box label {
+    font-size: 1.3rem;
+    font-family: 'Caveat', cursive;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    padding: 8px 20px;
+}
+
+/* Utility classes */
+.h-primary {
+    font-size: 3.8rem;
+    padding: 10px;
+    font-family: 'Caveat', cursive;
+    font-weight: bold;
+}
+
+.h-secondary {
+    font-size: 2.8rem;
+    padding: 13px;
+}
+
+.btn {
+    padding: 12px 20px;
+    border: 2px solid white;
+    background-color: brown;
+    color: white;
+    margin: 19px;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.center {
+    text-align: center;
+}
+
+.h-primary1 {
+    font-size: 3.8rem;
+    padding: 10px;
+    font-family: 'Caveat', cursive;
+    font-weight: bold;
+    color: white;
+}
+
+.icons {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin: 1px;
+}
+
+.icons a {
+    font-size: 2.1rem;
+}
+
+.icons #icon3 {
+    color: red;
+}
+
+.icons #icon0 {
+    color: rgb(167, 16, 66)
+}
+
+.icons #icon2 {
+    color: rgb(20, 25, 92)
+}
+
+#icon {
+    margin: 10px;
+}
+
+.icons .logos {
+    padding: 46px;
+    margin-top: -45px;
+}
+
+.btn1 {
+    padding: 12px 20px;
+    border: 2px solid white;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    margin-left: 280px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#dishes {
+    /* margin: 3px 21px; */
+    display: flex;
+    font-family: 'Figtree', sans-serif;
+    align-items: center;
+    justify-content: center;
+}
+
+.dishes-container {
+    background-color: rgb(234 239 237);
+    height: 100%;
+}
+
+#dishes .box {
+    width: 398px;
+    border: 0px solid rgb(0, 0, 0);
+    padding: 21px 2px;
+    background-color: rgb(255 223 223);
+    margin: 13px 39px;
+    border-radius: 80px;
+}
+
+#dishes .box:hover {
+    width: 415px;
+    border: 2px solid rgb(255, 221, 221);
+    padding: 21px 2px;
+    background-color: rgb(255, 200, 200);
+    margin: 13px 39px;
+    border-radius: 50px;
+}
+
+#dishes .box img {
+    height: 200px;
+    margin: auto;
+    display: block;
+    border-radius: 60px;
+    padding: 16px;
+}
+
+#menu {
+
+    display: grid;
+    justify-content: center;
+}
+
+#menu-box {
+    border: 2px solid gray;
+    padding: 20px;
+    height: 710px;
+    width: 620px;
+    background-color: rgb(243, 240, 240);
+    border-radius: 40px;
+}
+
+#menu::before {
+    content: "";
+    background: url('../img/bg2.jpg')no-repeat center center/cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 82rem;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.4;
+}
+
+#first {
+   margin-left: 250px;
+   margin-top: 100px;
+   border: 2px solid #ffffff;
+   height: 300px;
+   width: 400px;
+   background: url(/img/bga.jpg)no-repeat center center;
+   border-radius: 22px;
+}
+
+#second {
+   margin-left: 410px;
+   margin-top: -517px;
+   border: 2px solid #dfd2d2;
+   height: 400px;
+   width: 695px;
+   background-color: rgb(237, 200, 223);
+   border-radius: 33px;
+}
+#third {
+    margin-left: 870px;
+    margin-top: 29px;
+    border: 2px solid #ffffff;
+    height: 300px;
+    width: 400px;
+    background: url(/img/bga1.jpg)no-repeat center center;
+    border-radius: 22px;
+}
+
+.main-box::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 120%;
+    top: 0;
+    background-color: rgb(255 223 223);
+    ;
+    z-index: -1;
+    opacity: 1;
+}
+.box1{
+   height: 735px;
+}
+.box2{
+   position: relative;
+   background-color: rgb(238, 194, 238);
+   height: 200px;
+   width: 100%;
+   display: grid;
+   justify-content: center;
+}
+#details {
+   height:150px;
+   width:88em;
+   background-color: white;
+   margin-top: 26px;
+   display: flex;
+   align-items: center;
+   position: relative;
+}
+/* main page */
+#heading{
+
+   animation:anim 7s infinite; 
+}
+
+@keyframes anim  {
+   0%, 100% {
+      font-size:50px;
+   }
+   
+   50% {
+      font-size:80px;
+   }
+
+}
+
+
+/* sidebar */
+
+.sidebar {
+   margin: 0;
+   padding: 0;
+   width: 200px;
+   background-color: #f1f1f1;
+   position: fixed;
+   height: 100%;
+   overflow: auto;
+ }
+ 
+ .sidebar a {
+   display: block;
+   color: black;
+   padding: 16px;
+   text-decoration: none;
+ }
+  
+ .sidebar a.active {
+   background-color: #04AA6D;
+   color: white;
+ }
+ 
+ .sidebar a:hover:not(.active) {
+   background-color: #555;
+   color: white;
+ }
+ 
+ div.content {
+   margin-left: 200px;
+   padding: 1px 16px;
+   height: 1000px;
+ }
+ 
+ @media screen and (max-width: 700px) {
+   .sidebar {
+     width: 100%;
+     height: auto;
+     position: relative;
+   }
+   .sidebar a {float: left;}
+   div.content {margin-left: 0;}
+ }
+ 
+ @media screen and (max-width: 400px) {
+   .sidebar a {
+     text-align: center;
+     float: none;
+   }
+ }
+</style>
+</head>
+
+
+<body>
+    <nav id="navbar">
+        <div id="logo">
+            <img src="img/logo.png" alt="MymaharashtrinThali.com">
+        </div>
+
+        <ul>
+            <li class="item"><a href="first.html">What's Coocking</a></li>
+            <li class="item"><a href="menu.html">Menu</a></li>
+            <li class="item"><a href="about.html">About Us</a></li>
+            <li class="item"><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+    <section id="home">
+        <h1 class="h-primary" id="heading">Eat Whatever You Wish</h1>
+        <button class="btn">Order Online</button>
+    </section>
+    
+    <section class="services-container">
+        <h1 class="h-primary center">Our Services</h1>
+        <div id="services">
+            <div class="box">
+                <img src="img/1.jpg" alt="">
+                <h2 class="h2-secondary center">Food Ordering</h2>
+                <p class="center">crispy and spicy deep fried snack </p>
+            </div>
+            <div class="box">
+                <img src="img/2.jpg" alt="">
+                <h2 class="h2-secondary center">Food Catering</h2>
+                <p class="center">crispy and spicy deep fried snack </p>
+            </div>
+            <div class="box">
+                <img id="im" src="img/3.jpg" alt="">
+                <h2 class="h2-secondary center">Bulk Ordering</h2>
+                <p class="center">crispy and spicy deep fried snack </p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="client-section">
+        <h1 class="h-primary center">Our Clients</h1>
+        <div id="clients">
+            <div class="client-item">
+                <img src="img/1c.png" alt="">
+            </div>
+            <div class="client-item">
+                <img src="img/2c.png" alt="">
+            </div>
+            <div class="client-item">
+                <img src="img/3c.png" alt="">
+            </div>
+            <div class="client-item">
+                <img src="img/5c.png" alt="">
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="center">
+            Copyright&copy;.www.MymaharashtrianThali.com All rights reserved!
+        </div>
+    </footer>
+</body>
+
+</html>
