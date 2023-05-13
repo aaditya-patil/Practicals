@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <script type="text/JavaScript">
+    function display()
+    {
+       let text = localStorage.getItem("formJSON");
+       let obj =JSON.parse(text);
+       document.getElementById("abc").rows[0].cells[1].innerHTML=obj.Email;
+       document.getElementById("abc").rows[1].cells[1].innerHTML=obj.Password;
+       document.getElementById("abc").rows[2].cells[1].innerHTML=obj.Address;
+       document.getElementById("abc").rows[3].cells[1].innerHTML=obj.City;
+    }
+    </script>
+    </head>
+    <button type="submit" class="btn btn-primary" onclick="display();">
+    display
+   </button>
+    <p id="xyz"></p>
+    <table id="abc">
+    <tr>
+       <td>Email</td>
+       <td></td>
+    </tr>
+    <tr>
+       <td>Password</td>
+       <td></td>
+    </tr>
+    <tr>
+        <td>Address</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>City</td>
+        <td></td>
+    </tr>
+    </table>
+</html
